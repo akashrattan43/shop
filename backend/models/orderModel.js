@@ -9,14 +9,14 @@ const orderSchema = mongoose.Schema(
     },
     orderItems: [
       {
-        name: { tpye: String, required: true },
-        qty: { tpye: Number, required: true },
-        image: { tpye: String, required: true },
-        price: { tpye: Number, required: true },
+        name: { type: String, required: true },
+        qty: { type: Number, required: true },
+        image: { type: String, required: true },
+        price: { type: Number, required: true },
         product: {
-          tpye: mongoose.Schema.Types.ObjectId,
+          type: mongoose.Schema.Types.ObjectId,
           required: true,
-          red: "Product",
+          ref: "Product",
         },
       },
     ],
